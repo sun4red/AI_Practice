@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>전기기기 사고 사례 발표 - 메인</title>
+    <style>
+        /* 기존 스타일 유지 */
+        .main-hero {
+            display: flex;
+            height: calc(100vh - 150px);
+            min-height: 550px; /* 팀원 섹션 추가로 최소 높이 약간 상향 */
+            background-color: #1e1e2f;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .hero-text {
+            flex: 1.2;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-text h2 {
+            font-size: 3.5rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            color: #e91e63;
+            font-size: 4rem;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .start-btn {
+            display: inline-block;
+            width: fit-content;
+            padding: 15px 40px;
+            background-color: #e91e63;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+            margin-bottom: 40px; /* 하단 팀원 섹션과의 간격 */
+        }
+
+        .start-btn:hover {
+            background-color: #c2185b;
+            transform: translateY(-3px);
+        }
+
+        /* 신규: 팀원 정보 섹션 */
+        .team-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .team-label {
+            font-size: 0.9rem;
+            color: #e91e63;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-members {
+            font-size: 1.1rem;
+            color: #ddd;
+            display: flex;
+            gap: 20px;
+        }
+
+        .member-name {
+            position: relative;
+        }
+
+        /* 이름 사이 구분선 */
+        .member-name:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 오른쪽 그래픽 영역 유지 */
+        .hero-graphic {
+            flex: 1;
+            background-color: #2d3e63;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bolt-icon {
+            font-size: 10rem;
+            color: #e91e63;
+            filter: drop-shadow(0 0 20px rgba(233, 30, 99, 0.5));
+            margin-bottom: 20px;
+        }
+
+        .warning-icon {
+            font-size: 5rem;
+            color: #f59e0b;
+        }
+
+        .footer-info {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="header.html" class="header-frame" scrolling="no"></iframe>
+
+    <div class="container">
+        <div class="main-hero">
+            <div class="hero-text">
+                <h2>전기</h2>
+                <span class="highlight">사고 사례 발표</span>
+                <p>
+                    감전 · 화재 · 누전 사고 유형별 분석 및 예방대책<br>
+                    안전한 전기 사용을 위한 핵심 가이드를 확인하세요.
+                </p>
+                
+                <a href="index2.html" class="start-btn">START 발표 시작</a>
+                
+                <div class="team-section">
+                    <div class="team-label">Project Team</div>
+                    <div class="team-members">
+                        <span class="member-name">황태욱</span>
+                        <span class="member-name">김선홍</span>
+                        <span class="member-name">윤일</span>
+                        <span class="member-name">이정혁</span>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    전기안전 교육 자료 | 2026
+                </div>
+            </div>
+
+            <div class="hero-graphic">
+                <div class="bolt-icon">⚡</div>
+                <div class="warning-icon">⚠️</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

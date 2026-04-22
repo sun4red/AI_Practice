@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>프로젝트 종료 - 전기 사고 예방</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1c1f3a; /* 헤더와 동일한 진한 네이비로 통일감 부여 */
+            font-family: 'Pretendard', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 중앙 정렬 컨테이너 */
+        .finish-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* 강조 바 */
+        .finish-bar {
+            width: 80px;
+            height: 6px;
+            background-color: #e54863;
+            margin-bottom: 30px;
+        }
+
+        .finish-container h1 {
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: -2px;
+            font-weight: 800;
+        }
+
+        .finish-container p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        /* Q&A 강조 박스 */
+        .qa-box {
+            margin-top: 50px;
+            padding: 20px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            background: rgba(229, 72, 99, 0.1); /* 포인트 컬러 살짝 섞음 */
+            cursor: default;
+            transition: all 0.3s ease;
+        }
+
+        .qa-box:hover {
+            background: rgba(229, 72, 99, 0.2);
+            transform: scale(1.05);
+        }
+
+        .qa-box span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #e54863;
+        }
+
+        /* 하단 버튼 영역 */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background-color: #e54863;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: #ff5a77;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(229, 72, 99, 0.3);
+        }
+
+        .header-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            border: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="header.html" class="header-frame" scrolling="no"></iframe>
+
+    <div class="finish-container">
+        <div class="finish-bar"></div>
+        <h1>THANK YOU</h1>
+        <p>전기 사고 예방, 작은 실천이 소중한 생명을 구합니다.</p>
+        
+        <div class="qa-box">
+            <span>Any Questions?</span>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="06_presentation_05.html" class="btn">이전 페이지</a>
+    </div>
+
+</body>
+</html>

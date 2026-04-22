@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>전기 사고 예방 프로젝트 - 화재 · 과열 사고 사례</title>
+    <style>
+        /* 이 페이지에서만 사용하는 특수 스타일 */
+        .cause-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cause-card {
+            background: white;
+            padding: 20px 10px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-bottom: 5px solid #ddd;
+        }
+
+        .cause-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+        .cause-card .percent { font-size: 1.8rem; font-weight: bold; display: block; }
+        .cause-card .label { font-size: 0.95rem; font-weight: bold; color: #666; }
+
+        /* 색상 포인트 */
+        .border-red { border-bottom-color: #ef4444; }
+        .border-orange { border-bottom-color: #f59e0b; }
+        .border-navy { border-bottom-color: #0f172a; }
+        .border-green { border-bottom-color: #22c55e; }
+
+        .text-red { color: #ef4444; }
+        .text-orange { color: #f59e0b; }
+        .text-navy { color: #0f172a; }
+        .text-green { color: #22c55e; }
+
+        /* 사례 카드 레이아웃 */
+        .fire-cases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .case-item {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .case-item:hover { transform: translateY(-5px); }
+
+        .case-header {
+            padding: 12px 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .bg-orange { background-color: #f59e0b; }
+        .bg-red { background-color: #ef4444; }
+        .bg-navy { background-color: #0f172a; }
+
+        .case-body {
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        .main-cause-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .main-cause-box .fire-icon { font-size: 3rem; }
+    </style>
+</head>
+<body>
+
+    <iframe src="header.html" class="header-frame" scrolling="no"></iframe>
+
+    <div class="container">
+        <div class="title-section">
+            <span class="num">03</span>
+            <h1>화재 · 과열 사고 사례</h1>
+        </div>
+
+        <div class="main-cause-box card-base">
+            <span class="fire-icon">🔥</span>
+            <div>
+                <h3 style="margin:0 0 5px 0;">전기 화재 주요 원인</h3>
+                <p style="margin:0; color:#666;">과부하 · 단락 · 절연 열화가 전체 전기 화재의 <strong>80%</strong>를 차지</p>
+            </div>
+        </div>
+
+        <div class="cause-section">
+            <div class="cause-card border-red">
+                <span class="icon">🔌</span>
+                <span class="percent text-red">32%</span>
+                <span class="label">문어발 콘센트</span>
+            </div>
+            <div class="cause-card border-orange">
+                <span class="icon">🌡️</span>
+                <span class="percent text-orange">28%</span>
+                <span class="label">과부하 · 과열</span>
+            </div>
+            <div class="cause-card border-navy">
+                <span class="icon">⚡</span>
+                <span class="percent text-navy">22%</span>
+                <span class="label">단락(합선)</span>
+            </div>
+            <div class="cause-card border-green">
+                <span class="icon">🛠️</span>
+                <span class="percent text-green">18%</span>
+                <span class="label">절연 열화</span>
+            </div>
+        </div>
+
+        <div class="fire-cases">
+            <div class="case-item">
+                <div class="case-header bg-orange">사례 1: 멀티탭 과부하 화재 (2023)</div>
+                <div class="case-body">
+                    서울 아파트에서 멀티탭에 TV, 컴퓨터, 에어컨 등 7개 기기를 동시 연결. 정격 용량(16A) 초과로 과열 발생, 새벽 화재로 인명 피해. 멀티탭 허용 전류 미확인이 원인.
+                </div>
+            </div>
+
+            <div class="case-item">
+                <div class="case-header bg-red">사례 2: 전기장판 장시간 사용 화재 (2022)</div>
+                <div class="case-body">
+                    노인 1인 가구에서 전기장판을 최고 온도로 장시간 방치. 내부 발열선 단선 및 과열로 화재 발생. 온도 조절 미설정 및 외출 시 전원 미차단이 원인.
+                </div>
+            </div>
+
+            <div class="case-item">
+                <div class="case-header bg-navy">사례 3: 산업용 모터 과열 화재 (2023)</div>
+                <div class="case-body">
+                    제조 공장 내 컨베이어 모터 냉각 팬 고장 후 과열 방치. 절연재 탄화 및 인접 가연물 착화로 대형 화재 발생. 예방 점검 미실시 및 경보 시스템 부재가 원인.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
